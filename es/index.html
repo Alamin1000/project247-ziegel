@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <!--======== META TAGS ========-->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--======== CSS ========-->
+   <link rel="stylesheet" href="./../assets/css/bootstrap-grid.min.css">
+   <link rel="stylesheet" href="./../assets/css/fontawesome.min.css">
+   <link rel="stylesheet" href="./../assets/css/nice-select2.css">
+   <link rel="stylesheet" href="./../assets/css/spacing.min.css">
+   <link rel="stylesheet" href="./../assets/css/custom-font.css">
+   <link rel="stylesheet" href="./../assets/css/swiper-bundle.min.css"/>
+
+   <link rel="stylesheet" href="./../assets/css/style.css">
+   <link rel="stylesheet" href="./../assets/css/responsive.css">
+
+   <!--======== TITLE ICON ========-->
+   <link rel="shortcut icon" href="./../assets/img/logo/logo.svg" type="image/x-icon">
+   <title>ZIEGEL</title>
+
+</head>
+
+<body>
+   <!--======== MOUSE CIRCLE// ========-->
+   <div id="mouse-circle"></div>
+   <!--======== MOUSE CIRCLE// ========-->
+
+   <!--======== PRELOADER ========-->
+   <div class="preloader">
+      <div class="lds-roller">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+   </div>
+   <!--======== PRELOADER// ========-->
+
+   <!--======== OFFSET MENU ========-->
+   <div class="offset-menu">
+
+      <button class="bar">
+         <span></span>
+         <span></span>
+         <span></span>
+      </button>
+
+      <div class="mainmenu text-center mb-40">
+         <ul>
+            <li class="current"><a href="#">Vende tu inmueble</a></li>
+            <li><a href="#">Agentes</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+         </ul>
+      </div>
+      
+      <div class="header-btn text-center">
+         <div class="inline-list inline-list align-items-center g-3 justify-content-center">
+            <a href="./../en/index.html" class="icon"><i class="fa-light fa-globe"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+         </div>
+         <a href="#" class="site-btn black-hover mt-20">Ziegel Connect</a>
+      </div>
+   </div>
+   <!--======== OFFSET MENU// ========-->
+
+   <!--======== HEADER AREA ========-->
+   <header class="header-area">
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-3">
+               <div class="header-title inline-list g-3 align-items-center position-relative">
+                  <div class="logo ">
+                     <a href="./index.html"><img src="./../assets/img/logo/logo.svg" alt=""></a>
+                  </div>
+
+                  <button class="bar d-xl-none">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </button>
+               </div>
+            </div>
+            <div class="col-xl-6">
+               <div class="header-middle">
+
+                  <div class="mainmenu text-center d-none d-xl-block">
+                     <ul>
+                        <li class="current"><a href="#">Vende tu inmueble</a></li>
+                        <li><a href="#">Agentes</a></li>
+                        <li><a href="#">Trabaja con nosotros</a></li>
+                     </ul>
+                  </div>
+                  
+                  <div class="header-search mt-30">
+                     <form action="#">
+                        <input type="text" placeholder="¿Dónde buscas?">
+                        <select>
+                           <option selected>Tipo de propiedad</option>
+                           <option>Tipo de propiedad</option>
+                        </select>
+                        <select>
+                           <option selected>Venta</option>
+                           <option>Venta</option>
+                        </select>
+
+                        <button type="submit" class="circle-icon"><i class="fa-regular fa-search"></i></button>
+                     </form>
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="col-xl-3 d-none d-xl-block">
+               <div class="header-btn inline-list align-items-center g-2 justify-content-end">
+                  <a href="#" class="site-btn">Ziegel Connect</a>
+                  <span class="icon dropdown"><i class="fa-light fa-globe dropdown-trigger"></i>                   
+                     <ul class="dropdown-list">
+                        <li><a href="./../en/index.html">English</a></li>
+                     </ul>
+                  </span>
+                  <a href="#" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!--======== HEADER AREA// ========-->
+
+   <!--======== POPUP BOX ========-->
+   <div class="popup-box">
+      <div class="popup-cate active">
+         <div class="popup-inner text-center">
+            <form action="#">
+               <div class="popup-tabs">
+                  <div class="popup-tab active">
+                     <div class="pop-title position-relative">
+                        <h4 class="mb-0">¿Vendes tu propiedad?</h4>
+                        <h5>Estás a unos clicks de conseguirlo.</h5>
+                     </div>
+                     <input class="autocomplete" type="text" placeholder="¿Cuál es la dirección del inmueble a vender?">
+                  </div>
+                  <div class="popup-tab">
+                     <div class="pop-title position-relative">
+                        <h4 class="mb-0">¿Vendes tu propiedad?</h4>
+                        <h5>Estás a unos clicks de conseguirlo.</h5>
+                     </div>
+                     <input type="text" placeholder="¿Nos dices tu nombre?">
+                  </div>
+                  <div class="popup-tab">
+                     <div class="pop-title position-relative">
+                        <h4 class="mb-0">¿Vendes tu propiedad?</h4>
+                        <h5>Estás a unos clicks de conseguirlo.</h5>
+                     </div>
+                     <input type="email" placeholder="Email">
+                     <input type="tel" placeholder="Teléfono de contacto">
+                     <div class="radio-wrap">
+                        <input type="checkbox" id="ppr">
+                        <label for="ppr">Acepto la <a href="#">política de privacidad.</a></label>
+                     </div>
+                  </div>
+                  <div class="popup-tab">
+                     <div class="pop-title position-relative">
+                        <h4 class="mb-0">Hemos recibido tu solicitud.</h4>
+                        <h5>Pronto te contactará uno de nuestros
+                           mejores expertos inmobiliarios.</h5>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="inline-list justify-content-center g-2">
+                  <button type="button" class="site-btn round-btn black-hover mt-10 back-btn">Atrás</button>
+                  <button type="button" class="site-btn round-btn black-hover mt-10 next-btn active">Confirmar</button>
+               </div>
+
+            </form>
+         </div>
+
+      </div>
+      <div class="popup-cate">
+         <div class="popup-inner text-center">
+            <form action="#">
+               <div class="popup-tabs">
+                  <div class="popup-tab active">
+                     <div class="pop-title position-relative">
+                        <h3 class="mb-0">¿Te gustaría ser agente inmobiliario en Ziegel?</h3>
+                        <h5 class="fw-400">¡Obtén hasta un 90% de tu producción!</h5>
+                     </div>
+                     <input class="autocomplete2" type="text" placeholder="¿Cuál es tu nombre?">
+                  </div>
+                  <div class="popup-tab">
+                     <div class="pop-title position-relative">
+                        <h3 class="mb-0">¿Nos facilitas tus datos de contacto?</h3>
+                     </div>
+                     <input type="email" placeholder="Email">
+                     <input type="tel" placeholder="Teléfono de contacto">
+                     <div class="radio-wrap">
+                        <input type="checkbox" id="ppr2">
+                        <label for="ppr2">Acepto la <a href="#">política de privacidad.</a></label>
+                     </div>
+                  </div>
+                  <div class="popup-tab">
+                     <div class="pop-title position-relative">
+                        <h3 class="mb-0">Hemos recibido tu solicitud.</h3>
+                        <h4>Pronto te contactaremos :)</h4>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="inline-list justify-content-center g-2">
+                  <button type="button" class="site-btn round-btn black-hover mt-10 back-btn">Atrás</button>
+                  <button type="button" class="site-btn round-btn black-hover mt-10 next-btn active">Confirmar</button>
+               </div>
+            </form>
+         </div>
+
+      </div>
+   </div>
+   <!--======== POPUP BOX// ========-->
+   
+   <!--======== MAIN BODY ========-->
+   <main class="scroller">
+
+      <!--======== HERO AREA ========-->
+      <section class="hero-area">
+
+         <div class="hero-video el-absolute">
+            <div class="section-overlay"></div>
+            <video autoplay muted loop playsinline>
+               <source src="./../assets/video/283005_Planet_Space_Sun_Crater_By_Piotrek_Naumowicz_Artlist_HD (1).mp4">
+            </video>
+         </div>
+
+         <div class="hero-content hero-content-1">
+            <div class="container">
+               <div class="row justify-content-center">
+                  <div class="col-xxl-8 col-xl-9 col-md-10">
+                     <div class="section-content white-content text-center">
+                        <h3>Hemos seleccionado. <br> a los mejores expertos para ti.</h3>
+                        <p>Nuestros profesionales perciben <b>hasta el doble de ingresos</b> que los de la competencia. Es por
+                              ello, que los mejores agentes de la ciudad están aquí.</p>
+   
+                        <div class="mt-70 mt-xs-30 mt-md-50"></div>
+                        <div class="inline-list g-4 g-md-4 align-items-center justify-content-center">
+                           <a href="#" class="site-btn popup-btn">Quiero vender mi propiedad </a>
+                           <a href="#" class="link-text popup-btn"><u>Quiero ser agente</u></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="hero-horiz">
+            <div class="hero-content">
+               <div class="container">
+                  <div class="row justify-content-center">
+                     <div class="col-md-10">
+                        <div class="section-content white-content text-center">
+                           <h2 class="fw-400">Reinventamos el sector.</h2>
+
+                           <img class="g-img" src="./../assets/img/hero/google.webp" alt="">
+                           <ul class="stars inline-list g-1 justify-content-center text-white">
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                              <li><i class="fa-solid fa-star"></i></li>
+                           </ul>
+                           
+      
+                           <div class="mt-70 mt-xs-30 mt-md-50"></div>
+                           <div class="inline-list g-5 align-items-center justify-content-center">
+                              <a href="#" class="site-btn">Conoce nuestro método de venta </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+   
+            <div class="hero-content">
+               <div class="container">
+                  <div class="row justify-content-center">
+                     <div class="col-md-10">
+                        <div class="section-content white-content text-center">
+                           <h2 class="fw-400">Unificamos talento y tecnología.</h2>
+                           <p>Conviértete en agente Ziegel y obtén hasta un 90% de tu facturación.</p>
+   
+                           <div class="mt-70 mt-xs-30 mt-md-50"></div>
+                           <div class="inline-list g-5 align-items-center justify-content-center">
+                              <a href="#" class="site-btn">Únete a nuestra comunidad </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+      </section>
+      <!--======== HERO AREA// ========-->
+
+      <!--======== FEATURE AREA ========-->
+      <section class="feature-area" style="background-color: #fff;">
+         <div class="feature-top-shadow d-md-none"></div>
+         <div class="feature-scroller">
+
+            <div class="feature-content feature-text">
+               <div class="row">
+                  <div class="col-md-4 offset-md-4">
+                     <div class="section-content">
+                        <h1>Tenemos al experto adecuado para ti.</h1>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="feature-content container">
+               <div class="feature-bx position-relative">
+                  <div class="feature-bx-bg el-bg" style="background-color: #000;"></div>
+                  <div class="row align-items-center g-md-5 g-4">
+                     <div class="col-md-6">
+                        <div class="section-content white-content">
+                           <h2>Conoce a <br> nuestro agente del mes</h2>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="section-btn text-center">
+                           <a href="#" class="site-btn">Entrar en su perfil </a>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="feature-video">
+                           <img src="./../assets/img/feature/img.webp" alt="">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="feature-content container">
+               <div class="feature-bx position-relative">                        
+                  <video class="feature-bx-bg el-bg" autoplay muted loop playsinline>
+                     <source src="./../assets/video/videotest.mp4">
+                  </video>
+                  <div class="row justify-content-center">
+                     <div class="col-md-8">
+                        <div class="section-content white-content d-flex flex-column justify-content-end text-center align-items-center">
+                           <!-- <h2>VIDEO EN AUTORREPRODUCCION</h2> -->
+                           <a href="#" class="site-btn white-btn mb-30">Conoce a nuestros agentes </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </section>
+      <!--======== FEATURE AREA// ========-->
+
+      <!--======== BRAND AREA ========-->
+      <section class="brand-area pt-50 pb-90 pb-xs-40" style="background-color: #fff;">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-md-10">
+                  <div class="section-title text-center mb-50 mb-xs-30">
+                     <h3>Te ofrecemos <span class="rect">grandes<span></span></span> soluciones</h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="brand-slider-wrapper text-center">
+            <div class="brand-slider inline-list g-5">
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/1.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/2.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/3.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/4.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/1.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/2.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/3.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/4.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/1.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/2.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/3.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/4.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/1.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/2.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/3.png" alt="">
+               </div>
+               <div class="brand-slide">
+                  <img src="./../assets/img/brand/4.png" alt="">
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--======== BRAND AREA// ========-->
+
+      <!--======== PRODUCT AREA ========-->
+      <section class="product-area pt-160 pb-130 pt-xs-100 pb-xs-70 pt-md-100 pb-md-100">
+         <div class="container">            
+            <div class="row justify-content-center">
+               <div class="col-md-10">
+                  <div class="section-title white-content text-center mb-50 mb-xs-30">
+                     <h3>Conoce quién <span class="rect rect-green">está detrás<span></span></span> de Ziegel</h3>
+                  </div>
+               </div>
+            </div>
+
+            <div class="row justify-content-center">
+               <div class="col-xxl-10 col-xl-11">
+                  <div class="product-slider-wrapper swiper">
+                     <div class="product-slider swiper-wrapper">
+                        <div class="product-slide swiper-slide">
+                           <div class="product-img position-relative mb-20">
+                              <a href="#"><img src="./../assets/img/product/img.jpg" alt=""></a>
+                           </div>
+                           <div class="product-info">
+                              <h3 class="mb-0"><a href="#">Name</a></h3>
+                              <p>Position</p>
+                              <a href="#" class="product-cont">Email</a>
+                           </div>
+                        </div>
+                        <div class="product-slide swiper-slide">
+                           <div class="product-img position-relative mb-20">
+                              <a href="#"><img src="./../assets/img/product/img.jpg" alt=""></a>
+                           </div>
+                           <div class="product-info">
+                              <h3 class="mb-0"><a href="#">Name</a></h3>
+                              <p>Position</p>
+                              <a href="#" class="product-cont">Email</a>
+                           </div>
+                        </div>
+                        <div class="product-slide swiper-slide">
+                           <div class="product-img position-relative mb-20">
+                              <a href="#"><img src="./../assets/img/product/img.jpg" alt=""></a>
+                           </div>
+                           <div class="product-info">
+                              <h3 class="mb-0"><a href="#">Name</a></h3>
+                              <p>Position</p>
+                              <a href="#" class="product-cont">Email</a>
+                           </div>
+                        </div>
+                        <div class="product-slide swiper-slide">
+                           <div class="product-img position-relative mb-20">
+                              <a href="#"><img src="./../assets/img/product/img.jpg" alt=""></a>
+                           </div>
+                           <div class="product-info">
+                              <h3 class="mb-0"><a href="#">Name</a></h3>
+                              <p>Position</p>
+                              <a href="#" class="product-cont">Email</a>
+                           </div>
+                        </div>
+                        <div class="product-slide swiper-slide">
+                           <div class="product-img position-relative mb-20">
+                              <a href="#"><img src="./../assets/img/product/img.jpg" alt=""></a>
+                           </div>
+                           <div class="product-info">
+                              <h3 class="mb-0"><a href="#">Name</a></h3>
+                              <p>Position</p>
+                              <a href="#" class="product-cont">Email</a>
+                           </div>
+                        </div>
+                        <div class="product-slide swiper-slide">
+                           <div class="product-img position-relative mb-20">
+                              <a href="#"><img src="./../assets/img/product/img.jpg" alt=""></a>
+                           </div>
+                           <div class="product-info">
+                              <h3 class="mb-0"><a href="#">Name</a></h3>
+                              <p>Position</p>
+                              <a href="#" class="product-cont">Email</a>
+                           </div>
+                        </div>
+                        <div class="product-slide swiper-slide">
+                           <div class="product-img position-relative mb-20">
+                              <a href="#"><img src="./../assets/img/product/img.jpg" alt=""></a>
+                           </div>
+                           <div class="product-info">
+                              <h3 class="mb-0"><a href="#">Name</a></h3>
+                              <p>Position</p>
+                              <a href="#" class="product-cont">Email</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-button-wrap mt-60 mt-xs-40 mt-md-50">
+                        <button class="swiper-button swiper-button-prev"><i class="fa-solid fa-angle-left"></i></button>
+                        <button class="swiper-button swiper-button-next"><i class="fa-solid fa-angle-right"></i></button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </section>
+      <!--======== PRODUCT AREA// ========-->
+
+      <!--======== MAP AREA ========-->
+      <section class="map-area">
+         <div class="container">            
+            <div class="row justify-content-center">
+               <div class="col-md-10">
+                  <div class="section-title white-content text-center mb-50 mb-xs-30">
+                     <h3>Conoce <span class="rect rect-green">dónde<span></span></span> estamos</h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <div id="map"></div>
+      </section>
+      <!--======== MAP AREA// ========-->
+      
+      <!--======== FOOTER AREA ========-->
+      <footer class="footer-area pt-130 pt-xs-70 pt-md-100 pb-30 pb-xs-60 mb-md-50">
+         <div class="container">
+
+            <div class="foooter-content">
+               <div class="footer-logo mb-40 mb-xs-30"><a href="./index.html"><img src="./../assets/img/logo/logo.svg" alt=""></a></div>
+
+               <ul class="footer-menu mb-60 mb-xs-40 mb-md-50">
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="#">Vender mi propiedad</a></li>
+                  <li><a href="#">Encontrar un agente</a></li>
+                  <li><a href="#">Política de privacidad</a></li>
+                  <li><a href="#">Política de cookies</a></li>
+                  <li><a href="#">Aviso Legal</a></li>
+               </ul>
+            </div>
+
+            <div class="copyright">
+               <p><a href="mailto:Hola@ziegel.es">Hola@ziegel.es</a><br>Copyright | Creado con amor por <a href="./index.html">Ziegel</a> Innovación y Tecnología.</p>
+            </div>
+         </div>
+      </footer>
+      <!--======== FOOTER AREA// ========-->
+
+   </main>
+   <!--======== MAIN BODY// ========-->
+
+   <!--======== ESSENTIAL JS, PLUGIN JS ========-->
+   <script src="./../assets/js/nice-select2.js"></script>
+   <script src="./../assets/js/gsap.min.js"></script>
+   <script src="./../assets/js/ScrollTrigger.min.js"></script>   
+   <script src="./../assets/js/smooth-scrollbar.min.js"></script>
+   <script src="./../assets/js/swiper-bundle.min.js"></script>   
+   <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArtNQ-ihHylFAAEsWbS9mXWsWRgasktno&libraries=places&callback=initMap"></script>
+
+
+   <!--======== CUSTOM JS ========-->
+   <script src="./../assets/js/main.js"></script>
+
+</body>
+
+</html>

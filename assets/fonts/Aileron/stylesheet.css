@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Black.woff2') format('woff2'),
+        url('Aileron-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Heavy.woff2') format('woff2'),
+        url('Aileron-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Bold.woff2') format('woff2'),
+        url('Aileron-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Light.woff2') format('woff2'),
+        url('Aileron-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-Regular.woff2') format('woff2'),
+        url('Aileron-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aileron';
+    src: url('Aileron-SemiBold.woff2') format('woff2'),
+        url('Aileron-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
