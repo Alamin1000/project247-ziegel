@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <!--======== META TAGS ========-->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--======== CSS ========-->
+   <link rel="stylesheet" href="./../assets/css/bootstrap-grid.min.css">
+   <link rel="stylesheet" href="./../assets/css/fontawesome.min.css">
+   <link rel="stylesheet" href="./../assets/css/nice-select2.css">
+   <link rel="stylesheet" href="./../assets/css/spacing.min.css">
+   <link rel="stylesheet" href="./../assets/css/custom-font.css">
+   <link rel="stylesheet" href="./../assets/css/swiper-bundle.min.css"/>
+
+   <link rel="stylesheet" href="./../assets/css/style.css">
+   <link rel="stylesheet" href="./../assets/css/responsive.css">
+
+   <!--======== TITLE ICON ========-->
+   <link rel="shortcut icon" href="./../assets/img/logo/logo.svg" type="image/x-icon">
+   <title>ZIEGEL</title>
+
+</head>
+
+<body>
+   <!--======== MOUSE CIRCLE// ========-->
+   <div id="mouse-circle"></div>
+   <!--======== MOUSE CIRCLE// ========-->
+
+   <!--======== PRELOADER ========-->
+   <div class="preloader">
+      <div class="lds-roller">
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+         <div></div>
+      </div>
+   </div>
+   <!--======== PRELOADER// ========-->
+
+   <!--======== OFFSET MENU ========-->
+   <div class="offset-menu">
+
+      <button class="bar">
+         <span></span>
+         <span></span>
+         <span></span>
+      </button>
+
+      <div class="mainmenu text-center mb-40">
+         <ul>
+            <li class="current"><a href="#">Sell your property</a></li>
+            <li><a href="#">Agents</a></li>
+            <li><a href="#">Work with us</a></li>
+         </ul>
+      </div>
+      
+      <div class="header-btn text-center">
+         <div class="inline-list inline-list align-items-center g-3 justify-content-center">
+            <a href="./../es/index.html" class="icon"><i class="fa-light fa-globe"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+         </div>
+         <a href="#" class="site-btn black-hover mt-20">Ziegel Connect</a>
+      </div>
+   </div>
+   <!--======== OFFSET MENU// ========-->
+
+   <!--======== HEADER AREA ========-->
+   <header class="header-area" style="background-color: #000;">
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-3">
+               <div class="header-title inline-list g-3 align-items-center position-relative">
+                  <div class="logo ">
+                     <a href="./index.html"><img src="./../assets/img/logo/logo.svg" alt=""></a>
+                  </div>
+
+                  <button class="bar d-xl-none">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </button>
+               </div>
+            </div>
+            <div class="col-xl-6">
+               <div class="header-middle">
+
+                  <div class="mainmenu text-center d-none d-xl-block">
+                     <ul>
+                        <li class="current"><a href="#">Sell your property</a></li>
+                        <li><a href="#">Agents</a></li>
+                        <li><a href="#">Work with us</a></li>
+                     </ul>
+                  </div>
+                  
+                  <div class="header-search mt-30">
+                     <form action="#">
+                        <input type="text" placeholder="Where are you looking?">
+                        <select>
+                           <option selected>Kind of property</option>
+                           <option>Kind of property</option>
+                        </select>
+                        <select>
+                           <option selected>Sale</option>
+                           <option>Sale</option>
+                        </select>
+
+                        <button type="submit" class="circle-icon"><i class="fa-regular fa-search"></i></button>
+                     </form>
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="col-xl-3 d-none d-xl-block">
+               <div class="header-btn inline-list align-items-center g-2 justify-content-end">
+                  <a href="#" class="site-btn">Ziegel Connect</a>
+                  <span class="icon dropdown"><i class="fa-light fa-globe dropdown-trigger"></i>                   
+                     <ul class="dropdown-list">
+                        <li><a href="./../es/index.html">Spanish</a></li>
+                     </ul>
+                  </span>
+                  <a href="#" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!--======== HEADER AREA// ========-->
+
+   <!--======== POPUP BOX ========-->
+   <div class="popup-box">
+      <div class="popup-cate active">
+         <div class="popup-inner text-center">
+            <form action="#">
+               <div class="popup-tabs">
+                  <div class="popup-tab active">
+                     <div class="pop-title position-relative">
+                        <h4 class="mb-0">Do you sell your property?</h4>
+                        <h5>You are a few clicks away from getting it.</h5>
+                     </div>
+                     <input class="autocomplete" type="text" placeholder="What is the address of the property to be sold?">
+                  </div>
+                  <div class="popup-tab">
+                     <div class="pop-title position-relative">
+                        <h4 class="mb-0">Do you sell your property?</h4>
+                        <h5>You are a few clicks away from getting it.</h5>
+                     </div>
+                     <input type="text" placeholder="Can you tell us your name?">
+                  </div>
+                  <div class="popup-tab">
+                     <div class="pop-title position-relative">
+                        <h4 class="mb-0">Do you sell your property?</h4>
+                        <h5>You are a few clicks away from getting it.</h5>
+                     </div>
+                     <input type="email" placeholder="Email">
+                     <input type="tel" placeholder="Telephone contact">
+                     <div class="radio-wrap">
+                        <input type="checkbox" id="ppr">
+                        <label for="ppr">I accept the <a href="#">privacy policy.</a></label>
+                     </div>
+                  </div>
+                  <div class="popup-tab">
+                     <div class="pop-title position-relative">
+                        <h4 class="mb-0">We have received your request.</h4>
+                        <h5>Soon one of our best real estate experts will contact you.</h5>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="inline-list justify-content-center g-2">
+                  <button type="button" class="site-btn round-btn black-hover mt-10 back-btn">Back</button>
+                  <button type="button" class="site-btn round-btn black-hover mt-10 next-btn active">Confirm</button>
+               </div>
+
+            </form>
+         </div>
+
+      </div>
+      <div class="popup-cate">
+         <div class="popup-inner text-center">
+            <form action="#">
+               <div class="popup-tabs">
+                  <div class="popup-tab active">
+                     <div class="pop-title position-relative">
+                        <h3 class="mb-0">Would you like to be a real estate agent in Ziegel?</h3>
+                        <h5 class="fw-400">Get up to 90% of your production!</h5>
+                     </div>
+                     <input type="text" placeholder="What is your name?">
+                  </div>
+                  <div class="popup-tab">
+                     <div class="pop-title position-relative">
+                        <h3 class="mb-0">Do you provide us with your contact information?</h3>
+                     </div>
+                     <input type="email" placeholder="Email">
+                     <input type="tel" placeholder="Telephone contact">
+                     <div class="radio-wrap">
+                        <input type="checkbox" id="ppr2">
+                        <label for="ppr2">I accept the <a href="#">privacy policy.</a></label>
+                     </div>
+                  </div>
+                  <div class="popup-tab">
+                     <div class="pop-title position-relative">
+                        <h3 class="mb-0">We have received your request.</h3>
+                        <h4>We will contact you soon :)</h4>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="inline-list justify-content-center g-2">
+                  <button type="button" class="site-btn round-btn black-hover mt-10 back-btn">Back</button>
+                  <button type="button" class="site-btn round-btn black-hover mt-10 next-btn active">Confirm</button>
+               </div>
+            </form>
+         </div>
+
+      </div>
+   </div>
+   <!--======== POPUP BOX// ========-->
+   
+   <!--======== MAIN BODY ========-->
+   <main class="scroller">
+      
+      <div style="height: var(--header-h)"></div>
+      <!--======== nb-section ========-->
+      <section class="nb-section">
+         <div class="nb-section-title">
+            <div class="container">
+               <div class="nb-section-title-inner">
+                  <a href="#" class="left-logo">
+                     <img src="../assets/img/l-pop.png" alt="" class="icon">
+                     <span class="txt">Ubicacion</span>
+                  </a>
+
+                  <div class="right-side">
+                     <a href="#" class="button btn1">Mapa</a>
+                     <div class="select-x">
+                        <select name="" id="">
+                           <option value="">Dormitorios</option>
+                           <option value="">Dormitorios</option>
+                        </select>
+                     </div>
+                     <div class="select-x">
+                        <select name="" id="">
+                           <option value="">Banos</option>
+                           <option value="">Banos</option>
+                        </select>
+                     </div>
+                     <div class="select-x">
+                        <select name="" id="">
+                           <option value="">precio</option>
+                           <option value="">precio</option>
+                        </select>
+                     </div>
+                     <div class="select-x">
+                        <select name="" id="">
+                           <option value="">Tamano</option>
+                           <option value="">Tamano</option>
+                        </select>
+                     </div>
+                     <div class="select-x">
+                        <select name="" id="">
+                           <option value="">Tipologia</option>
+                           <option value="">Tipologia</option>
+                        </select>
+                     </div>
+
+                     <a href="#" class="button btn2">Buscar</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="nb-section-inner">
+               <div class="nb-main-nav-row">
+                  <div class="nb-main-tnav">
+                     <ul class="nav">
+                        <li><a class="active" href="#">Ver todo</a></li>
+                        <li><a href="#">Ziegel Selected</a></li>
+                     </ul>
+                  </div>
+                  <div class="in-ss-select">
+                     <select name="" id="">
+                        <option value="">Ordenar por</option>
+                        <option value="">Ordenar bor</option>
+                     </select>
+                  </div>
+               </div>
+               
+
+               <div class="nb-boxes-wrap">
+                  <!-- nb-box -->
+                  <div class="nb-box" style="background: url('../assets/img/image1.webp') no-repeat center center/cover;">
+                     <div class="nb-badge">Reclen publlcada</div>
+                     <div class="nb-box-content">
+                        <div class="cont-main">
+                           <p class="c1">VER MAS</p>
+                           <p class="cp">Lorem ipsum dolor <br> sit amet </p>
+                           <div class="bt-txt">
+                              <p class="cp">Lorem ipsum sit</p>
+                              <p><strong>Lorem ipsum dolor sit amet.</strong></p>
+                           </div>
+                        </div>
+
+                        <div class="bn-c-auth">
+                           <div class="image">
+                              <img src="../assets/img/user.png" alt="">
+                           </div>
+                           <div class="p">Lorem ipsum</div>
+                        </div>
+
+                        <div class="cont-nb-btn-part">
+                           <a href="#" class="site-btn button black-button">Liamar</a>
+                           <a href="#" class="site-btn button green-button">Whatsapp!</a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- nb-box-end -->
+                   <!-- nb-box -->
+                   <div class="nb-box" style="background: url('../assets/img/image2.webp') no-repeat center center/cover;">
+                     <div class="nb-badge nd-badge--black">Reclen publlcada</div>
+                     <div class="nb-box-content">
+                        <div class="cont-main">
+                           <p class="c1">VER MAS</p>
+                           <p class="cp">Lorem ipsum dolor <br> sit amet </p>
+                           <div class="bt-txt">
+                              <p class="cp">Lorem ipsum sit</p>
+                              <p><strong>Lorem ipsum dolor sit amet.</strong></p>
+                           </div>
+                        </div>
+
+                        <div class="bn-c-auth">
+                           <div class="image">
+                              <img src="../assets/img/user.png" alt="">
+                           </div>
+                           <div class="p">Lorem ipsum</div>
+                        </div>
+
+                        <div class="cont-nb-btn-part">
+                           <a href="#" class="site-btn button black-button">Liamar</a>
+                           <a href="#" class="site-btn button green-button">Whatsapp!</a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- nb-box-end -->
+                   <!-- nb-box -->
+                   <div class="nb-box" style="background: url('../assets/img/image3.webp') no-repeat center center/cover;">
+                     <div class="nb-badge">Bajada de precio <br> del 24% </div>
+                     <div class="nb-box-content">
+                        <div class="cont-main">
+                           <p class="c1">VER MAS</p>
+                           <p class="cp">Lorem ipsum dolor <br> sit amet </p>
+                           <div class="bt-txt">
+                              <p class="cp">Lorem ipsum sit</p>
+                              <p><strong>Lorem ipsum dolor sit amet.</strong></p>
+                           </div>
+                        </div>
+
+                        <div class="bn-c-auth">
+                           <div class="image">
+                              <img src="../assets/img/user.png" alt="">
+                           </div>
+                           <div class="p">Lorem ipsum</div>
+                        </div>
+
+                        <div class="cont-nb-btn-part">
+                           <a href="#" class="site-btn button black-button">Liamar</a>
+                           <a href="#" class="site-btn button green-button">Whatsapp!</a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- nb-box-end -->
+                   <!-- nb-box -->
+                   <div class="nb-box" style="background: url('../assets/img/image4.webp') no-repeat center center/cover;">
+                     <div class="nb-badge">Reclen publlcada</div>
+                     <div class="nb-box-content">
+                        <div class="cont-main">
+                           <p class="c1">VER MAS</p>
+                           <p class="cp">Lorem ipsum dolor <br> sit amet </p>
+                           <div class="bt-txt">
+                              <p class="cp">Lorem ipsum sit</p>
+                              <p><strong>Lorem ipsum dolor sit amet.</strong></p>
+                           </div>
+                        </div>
+
+                        <div class="bn-c-auth">
+                           <div class="image">
+                              <img src="../assets/img/user.png" alt="">
+                           </div>
+                           <div class="p">Lorem ipsum</div>
+                        </div>
+
+                        <div class="cont-nb-btn-part">
+                           <a href="#" class="site-btn button black-button">Liamar</a>
+                           <a href="#" class="site-btn button green-button">Whatsapp!</a>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- nb-box-end -->
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--======== nb-section-end ========-->
+      
+      <!--======== FOOTER AREA ========-->
+      <footer class="footer-area pt-130 pt-xs-70 pt-md-100 pb-30 pb-xs-60 mb-md-50">
+         <div class="container">
+
+            <div class="foooter-content">
+               <div class="footer-logo mb-40 mb-xs-30"><a href="./index.html"><img src="./../assets/img/logo/logo.svg" alt=""></a></div>
+
+               <ul class="footer-menu mb-60 mb-xs-40 mb-md-50">
+                  <li><a href="./index.html">home</a></li>
+                  <li><a href="#">sell my property</a></li>
+                  <li><a href="#">find an agent</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Cookies policy</a></li>
+                  <li><a href="#">Legal warning</a></li>
+               </ul>
+            </div>
+
+            <div class="copyright">
+               <p><a href="mailto:Hola@ziegel.es">Hola@ziegel.es</a><br>Copyright | Created with love by <a href="./index.html">Ziegel</a> Innovation and Technology.</p>
+            </div>
+         </div>
+      </footer>
+      <!--======== FOOTER AREA// ========-->
+
+   </main>
+   <!--======== MAIN BODY// ========-->
+
+   <!--======== ESSENTIAL JS, PLUGIN JS ========-->
+   <script src="./../assets/js/nice-select2.js"></script>
+   <script src="./../assets/js/gsap.min.js"></script>
+   <script src="./../assets/js/ScrollTrigger.min.js"></script>   
+   <script src="./../assets/js/smooth-scrollbar.min.js"></script>
+   <script src="./../assets/js/swiper-bundle.min.js"></script>   
+   <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArtNQ-ihHylFAAEsWbS9mXWsWRgasktno&libraries=places&callback=initMap"></script>
+
+
+   <!--======== CUSTOM JS ========-->
+   <script src="./../assets/js/main.js"></script>
+
+</body>
+
+</html>
