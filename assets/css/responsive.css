@@ -41,6 +41,10 @@
    .feature-video {
       height: 16em;
    }
+
+   .nb-boxes-wrap {
+      --item: 3;
+   }
 }
 
 /*========== LG + MD : BETWEEN 768PX TO 1199PX. ==========*/
@@ -103,6 +107,16 @@
       height: 15em;
    }
    /* FEATURE AREA */
+
+
+
+   .nb-boxes-wrap {
+      --item: 3;
+   }
+
+   .nb-section-title-inner .left-logo {
+      display: none;
+   }
 }
 
 /*========== LG-DESKTOP : BETWEEN 992PX TO 1199px. ==========*/
@@ -112,6 +126,7 @@
       max-width: 920px;
    }
    /* GLOBAL// */
+   
 }
 
 /*========== MD-TABLET : BETWEEN 768PX TO 991PX ==========*/
@@ -122,6 +137,32 @@
    }
    /* GLOBAL// */
    
+
+   .nb-boxes-wrap {
+      --item: 2;
+   }
+
+   .nb-section-title-inner .right-side {
+      flex-wrap: wrap;
+   }
+   .nb-section-title-inner .right-side .btn1 {
+      order: -1;
+      margin: 0;
+   }
+   .nb-section-title-inner .right-side .btn2 {
+      order: -1;
+   }
+   .nb-section-title-inner .right-side .select-x {
+      border: none;
+      height: initial;
+   }
+   .nb-section-title-inner .right-side .select-x select {
+      height: initial;
+      padding: 8px 26px 8px 9px;
+   }
+   .nb-section-title-inner .right-side .select-x::after {
+      top: 15px;
+   }
 }
 
 /*========== SMALL MOBILE : SMALLER THEN 767PX ==========*/
@@ -258,6 +299,50 @@
       font-size: .8em;
    }
    /* FOOTER AREA// */
+
+
+
+   .nb-boxes-wrap {
+      --item: 1;
+   }
+
+
+   .nb-main-nav-row {
+      flex-direction: column;
+   }
+   .in-ss-select {
+      margin-top: 15px;
+      margin-left: auto;
+   }
+
+   .nb-section-title-inner .left-logo {
+      display: none;
+   }
+   .nb-section-title-inner {
+      padding: 10px 0;
+   }
+
+   .nb-section-title-inner .right-side {
+      flex-wrap: wrap;
+   }
+   .nb-section-title-inner .right-side .btn1 {
+      order: -1;
+      margin: 0;
+   }
+   .nb-section-title-inner .right-side .btn2 {
+      order: -1;
+   }
+   .nb-section-title-inner .right-side .select-x {
+      border: none;
+      height: initial;
+   }
+   .nb-section-title-inner .right-side .select-x select {
+      height: initial;
+      padding: 8px 26px 8px 9px;
+   }
+   .nb-section-title-inner .right-side .select-x::after {
+      top: 15px;
+   }
 }
 
 /*========== LARGE MOBILE : BETWEEN 480PX TO 767PX ==========*/

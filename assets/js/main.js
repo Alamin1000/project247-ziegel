@@ -1,3 +1,23 @@
+
+// GET HEIGHT OF HEADER IN ROOT AS VERIABLE ==========>
+const headerArea = document.querySelector('.header-area')
+let root = document.documentElement;
+let height;
+window.addEventListener('resize', ()=>{addHeaderHeight()})
+window.addEventListener('load', ()=>{addHeaderHeight()})
+function addHeaderHeight() {
+	height = headerArea.clientHeight
+	root.style.setProperty('--header-h', height + 'px')
+}
+
+//========== NICE SELECT ==========>
+let selects = document.querySelectorAll('select')
+selects.forEach(select => {	
+	NiceSelect.bind( select);
+});
+//========== NICE SELECT// ==========>
+
+
 // SMOOTH SCROLLBAR INIT ==========>
 const scroller = document.querySelector('.scroller');
 const bodyScrollBar = Scrollbar.init(scroller, {
@@ -27,147 +47,154 @@ bodyScrollBar.addListener(({ offset }) => {
 
 // GSAP ANIMATIONS   ==========>
 
-// hero content come up fade
-gsap.from('.hero-horiz', {
-    autoAlpha: .5,
-    scrollTrigger: {
-        trigger: '.hero-horiz',
-        start: 'top center',
-        end: 'center center',
-        scrub: 1,
-    }
-})
-
-// hero content go left
-let heroHorizCont = gsap.utils.toArray(".hero-horiz .hero-content");
-const heroHorizTl = gsap.timeline({  
-  defaults: {ease: 'none'},
-  scrollTrigger: {
-    trigger: ".hero-horiz",
-    start: 'center center',
-    end: () => "+=" + document.querySelector('.hero-horiz').clientWidth,    
-    pin: true,
-    scrub: 1,
-  }
-})
-heroHorizTl.to(heroHorizCont, {
-    xPercent: -100 * (heroHorizCont.length - 1),
-})
-heroHorizCont.forEach(element => {
-  let itemTl = gsap.timeline()
-  itemTl.to(element,{
-        opacity: .1,
-        scrollTrigger: {     
-          containerAnimation: heroHorizTl,
-          trigger: element,
-          start: 'center center',
-          end: 'right left',
-          scrub: true,
-        }
-      })
-      .fromTo(element,{opacity: 0}, {
-        opacity: 1,
-        scrollTrigger: {     
-          containerAnimation: heroHorizTl,
-          trigger: element,
-          start: 'left right',
+if (document.querySelector('.hero-area')) {  
+  // hero content come up fade
+  gsap.from('.hero-horiz', {
+      autoAlpha: .5,
+      scrollTrigger: {
+          trigger: '.hero-horiz',
+          start: 'top center',
           end: 'center center',
-          scrub: true,
-        }
-      })
-});
-
-
-
-// pin the hero video
-ScrollTrigger.create({
-    trigger: '.hero-area',
-    start: 'top top',
-    end: 'bottom bottom',
-    pin: '.hero-video',
-});
-gsap.to('.hero-video',{
-  scale: .94,
-  marginTop: -30,
-  borderRadius: 30,
-  scrollTrigger:{
-    trigger: '.hero-area',
-    start: 'bottom-=20 bottom-=20',
-    end: 'bottom bottom',
-    scrub: .5,
-  }
-});
-
-
-// FEATURE HORIZONTAL ANIMATIONS
-let gsapnMedia = gsap.matchMedia();
-gsapnMedia.add("(min-width: 768px)", () => {
-
-  let featureContents = gsap.utils.toArray(".feature-content");
+          scrub: 1,
+      }
+  })
   
-  featureContents.forEach(content => {
-    if (content.classList.contains('container')) {
-      let style = content.currentStyle || window.getComputedStyle(content)
-      let width = content.clientWidth + parseInt(style.paddingLeft) + parseInt(style.paddingRight)
-      content.style.maxWidth = width + 'px';
-    }
-  });
-
-  const featureContTl = gsap.timeline({  
+  // hero content go left
+  let heroHorizCont = gsap.utils.toArray(".hero-horiz .hero-content");
+  const heroHorizTl = gsap.timeline({  
     defaults: {ease: 'none'},
     scrollTrigger: {
-      trigger: ".feature-scroller",
+      trigger: ".hero-horiz",
       start: 'center center',
-      end: () => "+=" + document.querySelector('.feature-scroller').clientWidth,    
+      end: () => "+=" + document.querySelector('.hero-horiz').clientWidth,    
       pin: true,
       scrub: 1,
     }
   })
-  featureContTl.to(featureContents, {
-      xPercent: -100 * (featureContents.length - 1),
+  heroHorizTl.to(heroHorizCont, {
+      xPercent: -100 * (heroHorizCont.length - 1),
   })
+  heroHorizCont.forEach(element => {
+    let itemTl = gsap.timeline()
+    itemTl.to(element,{
+          opacity: .1,
+          scrollTrigger: {     
+            containerAnimation: heroHorizTl,
+            trigger: element,
+            start: 'center center',
+            end: 'right left',
+            scrub: true,
+          }
+        })
+        .fromTo(element,{opacity: 0}, {
+          opacity: 1,
+          scrollTrigger: {     
+            containerAnimation: heroHorizTl,
+            trigger: element,
+            start: 'left right',
+            end: 'center center',
+            scrub: true,
+          }
+        })
+  });
+  
+  
+  
+  // pin the hero video
+  ScrollTrigger.create({
+      trigger: '.hero-area',
+      start: 'top top',
+      end: 'bottom bottom',
+      pin: '.hero-video',
+  });
+  gsap.to('.hero-video',{
+    scale: .94,
+    marginTop: -30,
+    borderRadius: 30,
+    scrollTrigger:{
+      trigger: '.hero-area',
+      start: 'bottom-=20 bottom-=20',
+      end: 'bottom bottom',
+      scrub: .5,
+    }
+  });
+  
+}
 
-  let featureVideo = document.querySelectorAll('.feature-video')
-  featureVideo.forEach(vdo => {
-    let parent = vdo.closest('.feature-bx')
-    let paddingleft = parseInt(window.getComputedStyle(parent, null).getPropertyValue('padding-left'))
-    gsap.to(vdo, {
-      x: ()=> parent.clientWidth - paddingleft * 2 - vdo.clientWidth,
+
+
+// FEATURE HORIZONTAL ANIMATIONS
+if (document.querySelector('.feature-area')) {  
+  let gsapnMedia = gsap.matchMedia();
+  gsapnMedia.add("(min-width: 768px)", () => {
+
+    let featureContents = gsap.utils.toArray(".feature-content");
+    
+    featureContents.forEach(content => {
+      if (content.classList.contains('container')) {
+        let style = content.currentStyle || window.getComputedStyle(content)
+        let width = content.clientWidth + parseInt(style.paddingLeft) + parseInt(style.paddingRight)
+        content.style.maxWidth = width + 'px';
+      }
+    });
+
+    const featureContTl = gsap.timeline({  
+      defaults: {ease: 'none'},
       scrollTrigger: {
-        trigger: parent,
-        start: ()=> vdo.clientWidth + ' right',
-        end: 'center left',
-        scrub: true,
-        containerAnimation: featureContTl,
+        trigger: ".feature-scroller",
+        start: 'center center',
+        end: () => "+=" + document.querySelector('.feature-scroller').clientWidth,    
+        pin: true,
+        scrub: 1,
       }
     })
-    
-  });
+    featureContTl.to(featureContents, {
+        xPercent: -100 * (featureContents.length - 1),
+    })
 
-});
-gsapnMedia.add("(max-width: 768px)", () => {
-  let featureShadowMaxY = document.querySelector('.feature-area').clientHeight - document.querySelector('.feature-top-shadow').clientHeight
-  ScrollTrigger.create({
-    trigger: '.feature-top-shadow',
-    start: 'top top',
-    pin: true,
-    end: ()=> "+=" + featureShadowMaxY,
-    pinSpacing: false,
-  })
-});
+    let featureVideo = document.querySelectorAll('.feature-video')
+    featureVideo.forEach(vdo => {
+      let parent = vdo.closest('.feature-bx')
+      let paddingleft = parseInt(window.getComputedStyle(parent, null).getPropertyValue('padding-left'))
+      gsap.to(vdo, {
+        x: ()=> parent.clientWidth - paddingleft * 2 - vdo.clientWidth,
+        scrollTrigger: {
+          trigger: parent,
+          start: ()=> vdo.clientWidth + ' right',
+          end: 'center left',
+          scrub: true,
+          containerAnimation: featureContTl,
+        }
+      })
+      
+    });
+
+  });
+  gsapnMedia.add("(max-width: 768px)", () => {
+    let featureShadowMaxY = document.querySelector('.feature-area').clientHeight - document.querySelector('.feature-top-shadow').clientHeight
+    ScrollTrigger.create({
+      trigger: '.feature-top-shadow',
+      start: 'top top',
+      pin: true,
+      end: ()=> "+=" + featureShadowMaxY,
+      pinSpacing: false,
+    })
+  });
+}
 
 // BRAND AREA WHITE BG ROUNDED
-gsap.to('.brand-area', {
-  scrollTrigger: {
-    trigger: '.brand-area',
-    start: 'bottom bottom',
-    end: 'bottom center',
-    scrub: .5,
-  },
-  borderRadius: '0 0 3em 3em',
-  // marginBottom: '-3em',
-})
-
+if (document.querySelector('.brand-area')) {  
+  gsap.to('.brand-area', {
+    scrollTrigger: {
+      trigger: '.brand-area',
+      start: 'bottom bottom',
+      end: 'bottom center',
+      scrub: .5,
+    },
+    borderRadius: '0 0 3em 3em',
+    // marginBottom: '-3em',
+  })
+}
 
 
 // HEADER COLOR INVERT ACCORDING TO BACKGROUND
@@ -191,8 +218,13 @@ function colorInvertHeader(selector, invert) {
   }
 }
 
-colorInvertHeader('.feature-area', true)
-colorInvertHeader('.product-area')
+if (document.querySelector('.feature-area')) {  
+  colorInvertHeader('.feature-area', true)
+}
+if (document.querySelector('.product-area')) {  
+  colorInvertHeader('.product-area')
+}
+
 
 
 
@@ -355,24 +387,6 @@ window.addEventListener("load", ()=>{
   )
 })
 //========== PRELOADER// ==========>
-
-//========== NICE SELECT ==========>
-let selects = document.querySelectorAll('select')
-selects.forEach(select => {	
-	NiceSelect.bind( select);
-});
-//========== NICE SELECT// ==========>
-
-// GET HEIGHT OF HEADER IN ROOT AS VERIABLE ==========>
-const headerArea = document.querySelector('.header-area')
-let root = document.documentElement;
-let height;
-window.addEventListener('resize', ()=>{addHeaderHeight()})
-window.addEventListener('load', ()=>{addHeaderHeight()})
-function addHeaderHeight() {
-	height = headerArea.clientHeight
-	root.style.setProperty('--header-h', height + 'px')
-}
 
 
 // FOLLOW MOUSE POITER CIRCLE ==========>
