@@ -791,32 +791,39 @@ function initMap() {
 // calculator-slider
 $(document).ready(function(){
   function birdJqueryUiOneHand(sWrap,sSlide,sTarget){
-    var uiSliderElm = document.querySelectorAll(sSlide);
-    uiSliderElm.forEach(CurrentElement => {
-      var uiSliderElmSingle = CurrentElement;
-      var uiSliderElmParent = getClosest(uiSliderElmSingle,sWrap);
-      var uiSliderTarget = uiSliderElmParent.querySelector(sTarget);
-      var uiSliderElmValue = uiSliderElmSingle.getAttribute('val') * 1;
-      var uiSliderElmMin = uiSliderElmSingle.getAttribute('min') * 1;
-      var uiSliderElmMax = uiSliderElmSingle.getAttribute('max') * 1;
-      var uiSliderElmStep = uiSliderElmSingle.getAttribute('step') * 1;
-      // alert(uiSliderElmValue)
-      $( function() {
-        $( uiSliderElmSingle ).slider({
-          min: uiSliderElmMin,
-          max: uiSliderElmMax,
-          value: uiSliderElmValue,
-          step: uiSliderElmStep,
-          orientation: "horizontal",
-          range: "min",
-          animate: true,
-          slide: function( event, ui ) {
-            $( uiSliderTarget ).text(uiSliderTarget.getAttribute('prefix') + ui.value + uiSliderTarget.getAttribute('suffix'));
-          },
+    let uiSliderElm = document.querySelectorAll(sSlide);
+    function sliderFunction(){
+      uiSliderElm.forEach(CurrentElement => {
+        let uiSliderElmSingle = CurrentElement;
+        let uiSliderElmParent = getClosest(uiSliderElmSingle,sWrap);
+        let uiSliderTarget = uiSliderElmParent.querySelector(sTarget);
+        let uiSliderElmValue = uiSliderElmSingle.getAttribute('val') * 1;
+        let uiSliderElmMin = uiSliderElmSingle.getAttribute('min') * 1;
+        let uiSliderElmMax = uiSliderElmSingle.getAttribute('max') * 1;
+        let uiSliderElmStep = uiSliderElmSingle.getAttribute('step') * 1;
+        let uiSliderTarPrefix = (uiSliderTarget.getAttribute('prefix')) ? uiSliderTarget.getAttribute('prefix') : '';
+        let uiSliderTarSuffix = (uiSliderTarget.getAttribute('suffix')) ? uiSliderTarget.getAttribute('suffix') : '';
+        // alert(uiSliderElmValue)
+        $( function() {
+          $( uiSliderElmSingle ).slider({
+            min: uiSliderElmMin,
+            max: uiSliderElmMax,
+            value: uiSliderElmValue,
+            step: uiSliderElmStep,
+            orientation: "horizontal",
+            range: "min",
+            animate: true,
+            slide: function( event, ui ) {
+              $( uiSliderTarget ).text(uiSliderTarPrefix + ui.value + uiSliderTarSuffix);
+            },
+          });
+          $( uiSliderTarget ).text(uiSliderTarPrefix + $( uiSliderElmSingle ).slider( "value" ) + uiSliderTarSuffix);
         });
-        $( uiSliderTarget ).text(uiSliderTarget.getAttribute('prefix') + $( uiSliderElmSingle ).slider( "value" ) + uiSliderTarget.getAttribute('suffix'));
-      });
-    })
+      })
+    }
+    if (uiSliderElm.length) {
+      sliderFunction();
+    }
     // function to get closest
     function getClosest( elem, selector ) {
       while (elem !== document.body) {
