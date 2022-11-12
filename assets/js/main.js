@@ -785,3 +785,45 @@ function initMap() {
 
   // autocomplete.addListener('place_changed', onPlaceChanged);
           }
+
+
+
+// calculator-slider
+$(document).ready(function(){
+  function birdJqueryUiOneHand(sWrap,sSlide,sTarget){
+    var uiSliderElm = document.querySelectorAll(sSlide);
+    uiSliderElm.forEach(CurrentElement => {
+      var uiSliderElmSingle = CurrentElement;
+      var uiSliderElmParent = getClosest(uiSliderElmSingle,sWrap);
+      var uiSliderTarget = uiSliderElmParent.querySelector(sTarget);
+      var uiSliderElmValue = uiSliderElmSingle.getAttribute('val') * 1;
+      var uiSliderElmMin = uiSliderElmSingle.getAttribute('min') * 1;
+      var uiSliderElmMax = uiSliderElmSingle.getAttribute('max') * 1;
+      var uiSliderElmStep = uiSliderElmSingle.getAttribute('step') * 1;
+      // alert(uiSliderElmValue)
+      $( function() {
+        $( uiSliderElmSingle ).slider({
+          min: uiSliderElmMin,
+          max: uiSliderElmMax,
+          value: uiSliderElmValue,
+          step: uiSliderElmStep,
+          orientation: "horizontal",
+          range: "min",
+          animate: true,
+          slide: function( event, ui ) {
+            $( uiSliderTarget ).text(uiSliderTarget.getAttribute('prefix') + ui.value + uiSliderTarget.getAttribute('suffix'));
+          },
+        });
+        $( uiSliderTarget ).text(uiSliderTarget.getAttribute('prefix') + $( uiSliderElmSingle ).slider( "value" ) + uiSliderTarget.getAttribute('suffix'));
+      });
+    })
+    // function to get closest
+    function getClosest( elem, selector ) {
+      while (elem !== document.body) {
+          elem = elem.parentElement;
+          if (elem.matches(selector)) return elem;
+      }
+    }
+  }
+  birdJqueryUiOneHand('.uiOneHand-single','.uiSlider-element','.uiSlider-target');
+});

@@ -1481,3 +1481,155 @@ footer {
 }
 /*========== nb-section// ==========*/
 
+
+
+/*========== clc-section ==========*/
+.clc-section {
+  padding: 30px 0;
+  background: #151515;
+  color: #fff;
+}
+.clc-section-inner {
+
+}
+.clc-section-title {
+  margin: 0 0 25px;
+  text-align: center;
+}
+.clc-section-title h2 {
+  font-size: 28.2px;
+  color: #fff;
+  font-weight: 300;
+  word-spacing: 2px;
+}
+
+.cls-cwr-x {
+  margin: 0 0 25px;
+}
+.cls-cwr-x h4 {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 300;
+}
+
+
+.cls-cwr-y {
+  display: flex;
+  align-items: center;
+}
+.cls-cwr-y .left-side {
+  width: 32%;
+  padding-right: 5%;
+}
+.cls-cwr-y .middle-side {
+  width: 37%;
+  padding-right: 5%; 
+}
+.cls-cwr-y .right-side {
+  width: 33.33%;
+  padding-right: 8%;
+}
+.cls-cwr-y .left-side .title {
+  margin: 0 0 35px;
+}
+.cls-cwr-y .left-side h4 {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 300;
+}
+.clc-lsm-ul {
+
+}
+.clc-lsm-ul-li {
+  margin: 0 0 22px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+}
+.clc-lsm-ul-li .ellipse {
+  height: 23px;
+  width: 23px;
+  margin: 0 6px 0 0;
+  border-radius: 50%;
+  background: #fff;
+}
+.clc-lsm-ul-li .ellipse.ellipse-2 {
+  opacity: 0.3;
+}
+.clc-lsm-ul-li .ellipse.ellipse-5 {
+  opacity: 0.6;
+}
+
+
+.cls-cwr-y .middle-side {
+
+}
+.clc-pai-mnc {
+  position: relative;
+}
+.clc-pai-mnc .pai-img {
+
+}
+.clc-pai-mnc .texts {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-30%);
+}
+.clc-pai-mnc .texts h3 {
+  font-size: 38px;
+  margin: 0 0 6px;
+  color: #fff;
+}
+.clc-pai-mnc .texts p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.cls-cwr-y .right-side {
+
+}
+.cls-cwr-y .right-side .title {
+  margin: 0 0 26px;
+}
+.cls-cwr-y .right-side h5 {
+  font-size: 19px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-weight: 300;
+}
+.clc-rn-sl-wrap {
+
+}
+.clc-rn-sl-wrap .ui-slider-design  {
+  margin: 0 0 25px;
+}
+.clc-rn-sl-wrap .ui-slider-design p {
+  font-size: 15px;
+  margin: 0 0 12px;
+  letter-spacing: 1px;
+  color: #fff;
+  font-weight: 300;
+}
+.ui-slider-design .ui-widget-content {
+  border: none;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.281);
+}
+.ui-slider-design .ui-slider-range { 
+  background: #fff;
+}
+.ui-slider-design .ui-slider-handle {
+  margin-top: -7px;
+  height: 26px;
+  width: 26px;
+  transition: 0s;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+}
+
+/*========== clc-section// ==========*/

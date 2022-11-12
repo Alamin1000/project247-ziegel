@@ -42,10 +42,69 @@
       height: 16em;
    }
 
+   /* nb */
    .nb-boxes-wrap {
       --item: 3;
    }
+
+
+
 }
+
+@media (max-width: 1499px) {
+   /* clc */
+   .clc-section-title h2 {
+      font-size: 22px;
+      word-spacing: 1px;
+   }
+   .cls-cwr-x h4 {
+      font-size: 20px;
+   }
+   .cls-cwr-y .left-side h4 {
+      font-size: 20px;
+   }
+   .clc-lsm-ul-li {
+      font-size: 14px;
+   }
+   .clc-lsm-ul-li .ellipse {
+      height: 19px;
+      width: 19px;
+      margin: 0 5px 0 0;
+   }
+   .cls-cwr-y .right-side h5 {
+      font-size: 17px;
+   }
+   .clc-rn-sl-wrap .ui-slider-design p {
+      font-size: 13.6px;
+   }
+   .ui-slider-design .ui-slider-handle {
+      margin-top: -5px;
+      height: 20px;
+      width: 20px;
+   }
+   .clc-pai-mnc .texts h3 {
+      font-size: 30px;
+      margin: 0 0 5px;
+   }
+   .clc-pai-mnc .texts p {
+      font-size: 14px;
+   }
+}
+
+
+@media (max-width: 1199px) {
+   /* clc */
+   .clc-section-title h2 {
+      font-size: 21px;
+      word-spacing: 1px;
+   }
+   .clc-section {
+      padding: 89px 0 30px;
+   }
+}
+
+
+
 
 /*========== LG + MD : BETWEEN 768PX TO 1199PX. ==========*/
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -117,6 +176,8 @@
    .nb-section-title-inner .left-logo {
       display: none;
    }
+
+
 }
 
 /*========== LG-DESKTOP : BETWEEN 992PX TO 1199px. ==========*/
@@ -342,6 +403,27 @@
    }
    .nb-section-title-inner .right-side .select-x::after {
       top: 15px;
+   }
+
+
+   /* clc */
+   .cls-cwr-y {
+      flex-wrap: wrap;
+   }
+   .cls-cwr-y .left-side {
+      width: 100%;
+      padding-right: 0;
+      margin: 0 0 30px;
+   }
+   .cls-cwr-y .middle-side {
+      width: 100%;
+      padding-right: 0;
+      margin: 0 0 30px;
+   }
+   .cls-cwr-y .right-side {
+      width: 100%;
+      padding-right: 0;
+      margin: 0 0 0px;
    }
 }
 
