@@ -110,6 +110,12 @@
       font-size: 15px;
    }
 
+
+   /* nb */
+   .nb-section {
+      padding: 55px 0 20px;
+   }
+
 }
 
 
@@ -231,7 +237,7 @@
       padding: 8px 26px 8px 9px;
    }
    .nb-section-title-inner .right-side .select-x::after {
-      top: 15px;
+      top: 23px;
    }
 }
 
@@ -421,8 +427,11 @@
       height: initial;
       padding: 8px 26px 8px 9px;
    }
+   .nb-section-title-inner .right-side .select-x .nice-select {
+      font-size: 16px;
+   }
    .nb-section-title-inner .right-side .select-x::after {
-      top: 15px;
+      top: 23px;
    }
 
 

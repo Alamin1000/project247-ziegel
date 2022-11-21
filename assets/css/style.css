@@ -1229,6 +1229,8 @@ footer {
   position: relative;
   height: 55px;
   border-left: 1px solid #a6a6a677;
+  display: flex;
+  align-items: center;
 }
 .nb-section-title-inner .right-side .select-x::after {
 	content: '';
@@ -1240,7 +1242,7 @@ footer {
 	background: url('../img/select-arrow.png') no-repeat center center/contain;
   pointer-events: none;
 }
-.nb-section-title-inner .right-side .select-x select {
+.nb-section-title-inner .right-side .select-x .nice-select {
   height: 55px;
   padding: 0 26px 0px 9px;
   font-size: 18px;
@@ -1250,6 +1252,11 @@ footer {
   font-weight: 500;
   appearance: none;
   -webkit-appearance: none;
+  display: flex;
+  align-items: center;
+}
+.nb-section-title-inner .right-side .select-x .nice-select::after {
+  display: none;
 }
 .nb-section-title-inner .right-side .button {
 	color: #fff;
@@ -1328,13 +1335,17 @@ footer {
 	background: url('../img/select-arrow-black.png') no-repeat center center/contain;
 	pointer-events: none;
 }
-.in-ss-select select {
-  padding: 0 13px 0 0;
+.in-ss-select .nice-select {
+  padding: 0 18px 0 0;
   background: transparent;
   font-size: 18px;
   appearance: none;
   -webkit-appearance: none;
   border: none;
+  color: #000;
+}
+.in-ss-select .nice-select::after {
+  display: none;
 }
 
 
